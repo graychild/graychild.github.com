@@ -1,0 +1,26 @@
+body {
+    margin:  0px;
+    padding: 0px;
+    
+    text-align: center;  /* center #page div */
+}
+#page {
+	width:   400px;
+	margin:  0px auto;
+	padding: 0px;
+	
+    text-align: left;  /* restore normal alignment */
+}
+
+a.photo img {
+	display: block;
+	width:   320px;
+	height:  240px;
+	margin:  10px auto;
+	
+	border: 0px;
+}
+#cboxPhoto {
+	width:   640px;
+	height:  480px;
+}
