@@ -1,0 +1,20 @@
+---
+
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Baby Watch 2010</title>
+    </head>
+    <body>
+        {% for post in site.posts %}
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                {{ post.content }}
+            </div>
+        {% endfor %}
+    </body>
+</html>
