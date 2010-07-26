@@ -1,2 +1,1 @@
-paginate: 10
 exclude: ['Rakefile', 'README.markdown']

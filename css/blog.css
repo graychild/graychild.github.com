@@ -12,15 +12,45 @@ body {
     text-align: left;  /* restore normal alignment */
 }
 
-a.photo img {
+div.one_per_row, div.two_per_row, div.four_per_row {
 	display: block;
+	margin:  10px auto;
+	width:   360px;
+}
+a.photo img {
+	border: 0px;
+}
+.one_per_row a.photo img {
 	width:   320px;
 	height:  240px;
-	margin:  10px auto;
-	
-	border: 0px;
+	margin:  2px;
+}
+.two_per_row a.photo img {
+	width:   160px;
+	height:  120px;
+	margin:  2px;
+}
+.four_per_row a.photo img {
+	width:   80px;
+	height:  60px;
+	margin:  2px;
 }
 #cboxPhoto {
 	width:   640px;
 	height:  480px;
+}
+
+#older_posts .year {
+	margin:  0px;
+	padding: 0px;
+}
+#older_posts .month {
+	margin:  0px 0px 0px 20px;
+	padding: 0px;
+}
+#older_posts .day {
+	margin:  0px 0px 0px 40px;
+	padding: 0px;
+	
+	font-weight: bold;
 }
