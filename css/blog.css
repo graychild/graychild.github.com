@@ -3,13 +3,27 @@ body {
     padding: 0px;
     
     text-align: center;  /* center #page div */
+
+	background-image: url('/images/clouds.jpg');
+	
+	font: 1em 'Comic Sans MS';
 }
 #page {
 	width:   400px;
 	margin:  0px auto;
-	padding: 0px;
+	padding: 20px 20px;
 	
     text-align: left;  /* restore normal alignment */
+
+	background: #FFFFFF url('/images/column_edges.jpg') repeat-y;
+}
+#clover {
+	margin: 400px 0px 0px 0px;
+	float:  left;
+}
+#sun {
+	margin: 50px 10px 0px 0px;
+	float:  right;
 }
 
 div.one_per_row, div.two_per_row, div.four_per_row {
@@ -39,6 +53,9 @@ a.photo img {
 	width:   640px;
 	height:  480px;
 }
+#cboxTitle {
+	font-size: 0.7em;
+}
 
 #older_posts .year {
 	margin:  0px;
@@ -53,4 +70,34 @@ a.photo img {
 	padding: 0px;
 	
 	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Verdana';
+}
+h1 {
+	color: #5F97E4;
+}
+a, a:visited {
+    text-decoration: none;
+    color:           #5F97E4;
+}
+a:hover {
+    text-decoration: underline;
+    color:           #FA7600;
+}
+p {
+	clear: right;
+}
+.date, .author {
+	clear:      none;
+	font-style: italic;
+	
+	color: #4E8900;
+}
+.date {
+	float: left;
+}
+.author {
+	float: right;
 }

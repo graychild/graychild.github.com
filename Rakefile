@@ -42,6 +42,7 @@ task :post do
       f.puts "</div>"
       f.puts
     end
+    f.puts %Q{<p class="date">{{ page.date|date:"%B %d, %Y" }}</p>}
     f.puts %Q{<p class="author">by #{author}</p>}
     f.puts
     f.puts "<p>\n    Post content goes here.\n</p>"
