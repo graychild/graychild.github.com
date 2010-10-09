@@ -54,19 +54,14 @@ a.photo img {
 	height:  480px;
 }
 
-#older_posts .year {
-	margin:  0px;
-	padding: 0px;
-}
-#older_posts .month {
-	margin:  0px 0px 0px 20px;
-	padding: 0px;
-}
-#older_posts .day {
-	margin:  0px 0px 0px 40px;
+#older_posts .month_day_year {
+	margin:  0px 0px 0px 0px;
 	padding: 0px;
 	
 	font-weight: bold;
+}
+#older_posts a {
+	margin:  0px 0px 0px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
