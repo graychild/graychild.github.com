@@ -9,7 +9,7 @@ layout: list
     </div>
 {% endfor %}
 
-<a href="#older_posts" onclick="$(this).hide(); $('#older_posts').show();">Show older posts</a>
+<a href="#older_posts" id="older_posts_link">Show older posts</a>
 <div id="older_posts" style="display: none;">
     {% for post in site.posts offset:10 %}
         {% if forloop.first %}

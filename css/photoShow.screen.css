@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*
+	photoShow Style
+	v1 - 7/20/10
+*/
+
+.photoShow { font-size:12px; font-family:Arial, Helvetica, sans-serif; position:relative; }
+.photoShow * { padding:0px; margin:0px; border:none; }
+.photoShow ul { list-style:none; }
+.photoShow img { display:block; width:100%; }
+.photoShow h3 { font-size:14px; font-weight:bold; color:#000000; margin:0px 0px 2px 0px;}
+
+#PS_preloadify { visibility:hidden; position:absolute; bottom:5px; right:10px; }
+    #PS_preloadify img{ width:2px; height:2px; }
+
+.photoShow .PS_container { position:relative; width:auto; overflow:hidden; }
+
+.photoShow .PS_images { position:relative; overflow:hidden; }
+	.photoShow .PS_images li { display:none; position:absolute; background:#000000; }
+	.photoShow .PS_images li.PS_current { display:block; }
+		.photoShow .PS_images li a { color:#cccccc; }
+		.photoShow .PS_images li img { margin:0px auto; position:relative; }
+		.photoShow .PS_images li div { position:absolute; bottom:0px; color:#ffffff; width:100%; padding:3px 0px 13px 0px; }
+			.photoShow .PS_images li div span { display:block; width:100%; height:100%; position:absolute; top:0px; left:0px; background:#000000;
+				opacity:0.7;
+			 }
+			.photoShow .PS_images li div h5 { font-size:14px; font-weight:normal; position:relative; padding:0px 5px 0px 5px; }
+			.photoShow .PS_images li div p { position:relative; padding:0px 5px 0px 5px; }
+	
+.photoShow .PS_thumbs { position:absolute; bottom:0px; display:block; }
+	.photoShow .PS_thumbs div { background:#000000; padding:4px; width:100%; height:100%; overflow:hidden; }
+	.photoShow .PS_thumbs ul { position:relative; }
+		.photoShow .PS_thumbs ul li { float:left; margin:0px 5px 5px 0px; overflow:hidden; width:75px; }
+		.photoShow .PS_thumbs ul li.PS_first_col { clear:left; }
+		.photoShow .PS_thumbs ul li.PS_last_col { margin-right:0px; }
+		.photoShow .PS_thumbs ul li.PS_last_row { margin-bottom:0px; }
+			.photoShow .PS_thumbs ul li a:link,
+			.photoShow .PS_thumbs ul li a:visited { display:block; overflow:hidden; }
+			.photoShow .PS_thumbs ul li a:hover,
+			.photoShow .PS_thumbs ul li.PS_current a { border-color:#ff0000; }
+				.photoShow .PS_thumbs ul li a:link img,
+				.photoShow .PS_thumbs ul li a:visited img { width:100%; opacity:0.66; }
+				.photoShow .PS_thumbs ul li a:hover img { opacity:0.88; }
+				.photoShow .PS_thumbs ul li.PS_current a img { opacity:1; }
+				
+.photoShow .PS_albums { position:absolute; bottom:0px; display:block; background:#000000; color:#ffffff; }
+    .photoShow .PS_albums div { padding:5px 4px; display:none; }
+        .photoShow .PS_albums div.PS_current { display:block; }
+    
+    .photoShow .PS_albums li { border:1px solid #ffffff; overflow:hidden; margin:0 0 4px 0; height:52px; cursor:pointer; }
+        .photoShow .PS_albums li.PS_last { margin-bottom:0px; }
+        .photoShow .PS_albums li.hover { background-color:#666666; }
+        .photoShow .PS_albums li.PS_current { background-color:#228ef1; }
+        
+        .photoShow .PS_albums li a { display:block; float:left; margin:6px; overflow:hidden; width:60px; height:40px; }
+        .photoShow .PS_albums li img { width:60px; }
+        .photoShow .PS_albums li h5 { font-size:12px; margin:4px 0 0 0; }
+        .photoShow .PS_albums li p { font-size:10px; line-height:11px; }
+
+.photoShow .PS_timer { position:absolute; bottom:0px; height:3px; background-color:#228ef1; opacity:0.88; width:0%; display:none; }
+
+.photoShow .PS_controls {
+        position:absolute; bottom:-8px; background:#606060; border:1px solid #000000;
+        -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px;
+        background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.10, #606060), color-stop(0.99, #000000));
+        background-image: -moz-linear-gradient(center top , #606060 10%, #000000 99%);
+    }
+	.photoShow .PS_controls li { float:left; margin:0px 0px 0px 0px; border-right:1px solid #666666; }
+        .photoShow .PS_controls li.PS_first {  }
+        .photoShow .PS_controls li.PS_last { border:none; margin:0px 0px 0px 0px; }
+    .photoShow .PS_controls li a { color:#ffffff; display:block; width:16px; height:16px; background:transparent url(../images/sprite-ffffff.png) 0px 0px no-repeat; margin:0px 5px 0px 5px; outline:none; }
+        .photoShow .PS_controls li a:hover { background-image:url(../images/sprite-aaaaaa.png); }
+        .photoShow .PS_controls li a:active { background-image:url(../images/sprite-228ef1.png); }
+        
+        .photoShow .PS_controls li a#PS_prev { background-position:-96px -1px; }
+        .photoShow .PS_controls li a#PS_albums { background-position:-223px -192px; width:17px; }
+        .photoShow .PS_controls li a#PS_autoplay { background-position:0px -161px; }
+        .photoShow .PS_controls li a#PS_thumbs { background-position:-223px -176px; width:17px; }
+        .photoShow .PS_controls li a#PS_next { background-position:-33px -1px; }
+        
+        .photoShow .PS_controls li.PS_on a { background-image:url(../images/sprite-228ef1.png); outline:none; }
+        .photoShow .PS_controls li.PS_off a { outline:none; }
+	   
+        .photoShow .PS_controls li a i { display:none; }
+
+.photoShow .PS_counter { position:absolute; top:3px; right:3px; background:#333333; color:#ffffff; font-size:11px; padding:3px 6px 3px 6px; opacity:0.75 }
+
+/* -- Preset Styles -- */
+/*
+    The icon sprite is a slight mod of the base jQueryUI icon sprite.  New colors can be generated here...
+    http://jqueryui.com/themeroller/images/?new=888888&w=256&h=240&f=png&fltr[]=rcd|256&fltr[]=mask|icons/icons.png
+    ... by changing the "new" param in the URL.
+    
+    The custom mod are the "thumbnails" and "albums" icons
+*/
+.PS_light { }
+    .PS_light h3 { color:#ffffff; }
+    .PS_light .PS_images li { background-color:#000000; }
+        /* captions */
+        .PS_light .PS_images li a { color:#cccccc; }
+        .PS_light .PS_images li div { color:#ffffff; }
+            .PS_light .PS_images li div span { background-color:#333333; }
+
+.PS_light .PS_counter { background-color:#666666; color:#ffffff; }
+    .PS_light .PS_thumbs div { background:#ffffff; }
+    .PS_light .PS_controls {
+            background:#cdcdcd; border:1px solid #ffffff;
+            background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.10, #ffffff), color-stop(0.99, #cdcdcd));
+            background-image: -moz-linear-gradient(center top , #ffffff 10%, #cdcdcd 99%);
+        }
+        .PS_light .PS_controls li { border-right:1px solid #dddddd; }
+        .PS_light .PS_controls li a { color:#000000; background:transparent url(../images/sprite-222222.png) 0px 0px no-repeat; }
+            .PS_light .PS_controls li a:hover { background-image:url(../images/sprite-228ef1.png); }
+        .PS_light .PS_controls li.PS_on a { background-image:url(../images/sprite-aaaaaa.png); }
+
+    .PS_light .PS_albums { background:#ffffff; color:#000000; }
+        .PS_light .PS_albums li { border:1px solid #000000; }
+            .PS_light .PS_albums li.hover { background-color:#dddddd; }
+            .PS_light .PS_albums li.PS_current { background-color:#68afef; }
+
+    .PS_light .PS_timer { background-color:#68afef; }
+

@@ -4,28 +4,44 @@ body {
     
     text-align: center;  /* center #page div */
 
-	background-image: url('/images/clouds.jpg');
+	background-image: url('/images/yellow_clouds.jpg');
 }
 #page {
-	width:   400px;
+	width:   700px;
 	margin:  0px auto;
-	padding: 20px 20px;
+	padding: 0;
 	
     text-align: left;  /* restore normal alignment */
 
-	background: #FFFFFF url('/images/column_edges.jpg') repeat-y;
-	
 	font: 1em 'Comic Sans MS';
 }
-#clover {
-	margin: 400px 0px 0px 0px;
-	float:  left;
+#page_content, #page_background {
+	display: none;
+	
+	padding: 20px;
+	width:   700px;
 }
-#sun {
-	margin: 50px 10px 0px 0px;
-	float:  right;
+#page_content {
+	position: absolute;
+	z-index: 2;
+}
+#page_background {
+	width: 100%;
+	height: 100%;
+
+	background-color: #FFFFFF;
+    -ms-filter:       "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter:           alpha(opacity=75);
+    -moz-opacity:     0.75;
+    -khtml-opacity:   0.75;
+    opacity:          0.75;
 }
 
+.photo img {
+	width:  640px;
+	height: 480px;
+	border: 0px;
+}
 div.one_per_row, div.two_per_row, div.four_per_row {
 	display: block;
 	margin:  10px auto;
