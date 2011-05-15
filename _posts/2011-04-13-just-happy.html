@@ -2,17 +2,26 @@
 title: Just Happy
 layout: post
 ---
-<div class="two_per_row">
-    <a class="photo" rel="just-happy" href="/images/smiles.jpg" title="I'm having fun.  Wanna join me?">
-        <img src="/images/smiles.jpg" />
-    </a>
-    <a class="photo" rel="just-happy" href="/images/more_smiles.jpg" title="I know.  I'm cute.">
-        <img src="/images/more_smiles.jpg" />
-    </a>
-    <a class="photo" rel="just-happy" href="/images/chew_toy.jpg" title="Let me make sure this toy is safe for you to play with.">
-        <img src="/images/chew_toy.jpg" />
-    </a>
-</div>
+<ul class="slideshow">
+    <li>
+        <a href="/images/smiles.jpg">
+            <img src="/images/smiles.jpg" />
+        </a>
+        <span>I'm having fun.  Wanna join me?</span>
+    </li>
+    <li>
+        <a href="/images/more_smiles.jpg">
+            <img src="/images/more_smiles.jpg" />
+        </a>
+        <span>I know.  I'm cute.</span>
+    </li>
+    <li>
+        <a href="/images/chew_toy.jpg">
+            <img src="/images/chew_toy.jpg" />
+        </a>
+        <span>Let me make sure this toy is safe for you to play with.</span>
+    </li>
+</ul>
 
 <p class="date">{{ page.date|date:"%B %d, %Y" }}</p>
 <p class="author">by Dana</p>

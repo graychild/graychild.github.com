@@ -2,7 +2,7 @@ require "cgi"
 
 Dir.glob("_posts/*.html") do |path|
   html = File.read(path)
-  if photos = html[%r{^<div\s+class="\w+_per_row">.+?</div>[^ \t]*\n}m]
+  if photos = html[%r{<div\s+class="\w+_per_row">.+?</div>}m]
     slideshow = %Q{<ul class="slideshow">\n}
     photos.scan(%r{<a\s*[^>]*\btitle="([^"]+)"[^>]*>\s*<img\s*src="([^"]+)"}) do
       slideshow << %Q{    <li>\n}                                     +
@@ -16,8 +16,5 @@ Dir.glob("_posts/*.html") do |path|
     if html.sub!(photos, slideshow)
       open(path, "w") { |f| f.write html }
     end
-    puts photos
-    puts slideshow
-    puts
   end
 end

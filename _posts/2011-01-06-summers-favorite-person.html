@@ -2,14 +2,20 @@
 title: Summer's Favorite Person
 layout: post
 ---
-<div class="two_per_row">
-    <a class="photo" rel="summers-favorite-person" href="/images/whats_down_there.jpg" title="Who's down there?">
-        <img src="/images/whats_down_there.jpg" />
-    </a>
-    <a class="photo" rel="summers-favorite-person" href="/images/the_dog.jpg" title="Gypsy!  Gypsy?  Hey, I'm up here.">
-        <img src="/images/the_dog.jpg" />
-    </a>
-</div>
+<ul class="slideshow">
+    <li>
+        <a href="/images/whats_down_there.jpg">
+            <img src="/images/whats_down_there.jpg" />
+        </a>
+        <span>Who's down there?</span>
+    </li>
+    <li>
+        <a href="/images/the_dog.jpg">
+            <img src="/images/the_dog.jpg" />
+        </a>
+        <span>Gypsy!  Gypsy?  Hey, I'm up here.</span>
+    </li>
+</ul>
 
 <p class="date">{{ page.date|date:"%B %d, %Y" }}</p>
 <p class="author">by Dana</p>
