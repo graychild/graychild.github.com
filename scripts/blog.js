@@ -1,4 +1,6 @@
 $(document).ready( function() {
+	$('#page_content').fadeIn();
+
 	$('.slideshow').each( function(i) {
 		var ul = $(this);
 		if (ul.find('li').length == 1) {
@@ -18,7 +20,6 @@ $(document).ready( function() {
 		}
 	} );
 
-	$('#page_content').fadeIn();
 	$('#page_background').height($('#page_content').height());
 	$('#page_background').show();
 

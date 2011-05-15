@@ -7,7 +7,7 @@ body {
 	background-image: url('/images/yellow_clouds.jpg');
 }
 #page {
-	width:   700px;
+	width:   640px;
 	margin:  0px auto;
 	padding: 0;
 	
@@ -18,8 +18,8 @@ body {
 #page_content, #page_background {
 	display: none;
 	
-	padding: 20px;
-	width:   700px;
+	padding: 0px 30px 30px 30px;
+	width:   640px;
 }
 #page_content {
 	position: absolute;
@@ -37,37 +37,11 @@ body {
     opacity:          0.75;
 }
 
-.photo img {
-	width:  640px;
-	height: 480px;
-	border: 0px;
-}
-div.one_per_row, div.two_per_row, div.four_per_row {
-	display: block;
-	margin:  10px auto;
-	width:   360px;
-}
-a.photo img {
-	border: 0px;
-}
-.one_per_row a.photo img {
-	width:   320px;
-	height:  240px;
-	margin:  2px;
-}
-.two_per_row a.photo img {
-	width:   160px;
-	height:  120px;
-	margin:  2px;
-}
-.four_per_row a.photo img {
-	width:   80px;
-	height:  60px;
-	margin:  2px;
-}
-#cboxPhoto {
-	width:   640px;
-	height:  480px;
+.slideshow {
+	margin-left:   0px;
+	margin-right:  0px;
+	padding-left:  0px;
+	padding-right: 0px;
 }
 
 #older_posts .year {
