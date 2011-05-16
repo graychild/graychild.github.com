@@ -61,7 +61,7 @@ task :post do
       FileUtils.mv(resized, image)
     else
       system( "composite -gravity center " +
-              "#{resized} images/white_background.gif #{image}" )
+              "#{resized} images/black_background.gif #{image}" )
       FileUtils.rm(resized)
     end
   end
@@ -69,19 +69,16 @@ task :post do
   open(path, "w") do |f|
     f.puts "---\ntitle: #{title}\nlayout: post\n---"
     unless images.empty?
-      image_layout = case images.size
-                     when 1    then "one_per_row"
-                     when 2..6 then "two_per_row"
-                     else           "four_per_row"
-                     end
-      f.puts %Q{<div class="#{image_layout}">}
+      f.puts %Q{<ul class="slideshow">}
       images.each do |image|
-        f.puts %Q{    <a class="photo" rel="#{slug}" href="/#{image}" } +
-                      %Q{title="Caption goes here.">}
-        f.puts %Q{        <img src="/#{image}" />}
-        f.puts "    </a>"
+        f.puts   "    <li>"
+        f.puts %Q{        <a href="/#{image}">}
+        f.puts %Q{            <img src="/#{image}" />}
+        f.puts   "        </a>"
+        f.puts   "        <span>Caption goes here.</span>"
+        f.puts   "    </li>"
       end
-      f.puts "</div>"
+      f.puts "</ul>"
       f.puts
     end
     f.puts %Q{<p class="date">{{ page.date|date:"%B %d, %Y" }}</p>}

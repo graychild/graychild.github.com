@@ -5,20 +5,24 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>Summer Leslie Gray:  {{page.title}}</title>
 
-        <link rel="stylesheet" href="/css/blog.css"     type="text/css" media="screen" charset="utf-8">
-        <link rel="stylesheet" href="/css/colorbox.css" type="text/css" media="screen" charset="utf-8">
-        
-        <script src="/scripts/jquery-1.4.2.min.js"    type="text/javascript" charset="utf-8"></script>
-        <script src="/scripts/jquery.colorbox-min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/scripts/blog.js"                type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" href="/css/blog.css"             type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="/css/photoShow.screen.css" type="text/css" media="screen" charset="utf-8">
+
+        <script src="/scripts/jquery-1.4.2.min.js"      type="text/javascript" charset="utf-8"></script>
+        <script src="/scripts/jquery.photoShow.pack.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/scripts/blog.js"                  type="text/javascript" charset="utf-8"></script>
     </head>
-    <body>
-        <!-- <img id="clover" src="/images/clover.png" width="290" height="252" />
-        <img id="sun"    src="/images/sun.png"    width="290" height="335" /> -->
+    <body class="post_page">
         <div id="page">
-            <div class="post">
-                <h1>{{ page.title }}</h1>
-                {{ content }}
+            <div id="page_content">
+                <div class="post">
+                    <h1>{{ page.title }}</h1>
+                    {{ content }}
+                    <a href="/">Back to Articles</a>
+                </div>
+            </div>
+            <div id="page_background">
+                &nbsp;
             </div>
         </div>
     </body>

@@ -7,9 +7,10 @@ body {
 	background-image: url('/images/yellow_clouds.jpg');
 }
 #page {
-	width:   640px;
-	margin:  0px auto;
-	padding: 0;
+	width:      640px;
+	min-height: 100%;
+	margin:     0px auto;
+	padding:    0;
 	
     text-align: left;  /* restore normal alignment */
 
@@ -18,8 +19,14 @@ body {
 #page_content, #page_background {
 	display: none;
 	
+	width:      640px;
+	min-height: 100%;
+}
+.list_page #page_content, .list_page #page_background {
 	padding: 0px 30px 30px 30px;
-	width:   640px;
+}
+.post_page #page_content, .post_page #page_background {
+	padding: 0px 30px 0px 30px;
 }
 #page_content {
 	position: absolute;
@@ -66,21 +73,24 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Verdana';
 }
 h1 {
-	color: #5F97E4;
+	font-weight: normal;
+
+	color: #FE995E;
 }
 a, a:visited {
     text-decoration: none;
-    color:           #5F97E4;
+    color:           #FE995E;
 }
 a:hover {
     text-decoration: underline;
-    color:           #FA7600;
+    color:           #FE995E;
 }
 .date, .author {
-	width:      50%;
-	font-style: italic;
+	width:       50%;
+	font-style:  italic;
+	font-weight: bold;
 	
-	color: #4E8900;
+	color: #DDAFF4;
 }
 .date {
 	float: left;
