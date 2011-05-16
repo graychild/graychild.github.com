@@ -50,6 +50,9 @@ body {
 	padding-left:  0px;
 	padding-right: 0px;
 }
+.slideshow p {
+	font-size: 1.5em;
+}
 
 #older_posts .year {
 	margin:  0px;
